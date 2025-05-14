@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-card class="block">
+    <form class="form-sign-in" [formGroup]="loginForm" (ngSubmit)="login()">
+      <!--      <img
+              class="header-img"
+              src="https://www.flaticon.com/svg/static/icons/svg/2996/2996761.svg"
+              alt="dumbbell"
+            />-->
+      <span class="title-entry">Логин</span>
+      <mat-form-field>
+        <mat-label>Имя пользователя</mat-label>
+        <label>
+          <input type="email" matInput formControlName="username" />
+        </label>
+        <mat-error
+          *ngIf="loginForm.controls.username.invalid"
+        >
+          Ошибка
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Пароль</mat-label>
+        <label>
+          <input type="password" matInput formControlName="password" (keyup.enter)="login()" />
+        </label>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="btn-submit"
+        type="submit"
+        color="primary"
+        [disabled]="!loginForm.valid"
+      >
+        Логин
+      </button>
+      <div *ngIf="isDisplayProgressBar" class="progress-bar-container">
+        <mat-progress-bar class="progress-bar" mode="indeterminate"></mat-progress-bar>
+      </div>
+      <div *ngFor="let err of errorList">
+        <div *ngIf="err.status" class="error-container">
+          <span class="error-message">{{ err.message }}</span>
+        </div>
+      </div>
+    </form>
+    <div class="btn-link">
+      <a routerLink="/registration">Регистрация</a>
+    </div>
+  </mat-card>
+</div>
