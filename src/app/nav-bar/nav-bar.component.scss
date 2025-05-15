@@ -1,0 +1,88 @@
+mat-toolbar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+
+  .nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    height: 100%;
+
+    .left-part {
+      height: 100%;
+
+      .btn {
+        height: 100%;
+        font-size: 16px;
+        color: #424242;
+      }
+
+      .active {
+        color: #1916fc;
+      }
+    }
+
+    .right-part {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      .language {
+        height: 100%;
+
+        .selected {
+          height: 100%;
+          width: 120px;
+
+          .icon {
+            transform: scale(0.9);
+            color: rgba(0, 0, 0, 0.6);
+            margin-right: 3px;
+          }
+
+          span {
+            color: rgba(0, 0, 0, 0.75);
+            padding-top: 5px;
+          }
+        }
+      }
+
+      .profile {
+        display: flex;
+        height: 100%;
+
+        .big-button {
+          height: 100%;
+          width: min-content;
+
+          .name {
+            margin-right: 10px;
+            font-weight: 500;
+          }
+
+          .avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            object-fit: contain;
+            cursor: pointer;
+          }
+
+          .icon {
+            transform: scale(0.8);
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.exit {
+  color: #e60c0c;
+}

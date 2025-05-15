@@ -1,0 +1,28 @@
+.home-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #e8eaf6;
+}
+
+.hello-container {
+  display: flex;
+  align-items: center;
+  background: #f3ecff;
+  border: #b38be5 dashed 3px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.hello-img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.mat-display-3 {
+  color: #b38be5;
+  font-weight: 600;
+  margin: 0;
+}

@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  height: 66px;
+}
+
+main {
+  align-self: center;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+}

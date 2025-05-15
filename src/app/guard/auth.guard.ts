@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribe$.next();
+    this.unsubscribe$.next(console.log('unsubscribe'));
     this.unsubscribe$.complete();
   }
 

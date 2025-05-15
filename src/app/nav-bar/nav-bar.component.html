@@ -1,1 +1,37 @@
-<p>nav-bar works!</p>
+<mat-toolbar>
+  <div class="nav-bar-container">
+    <div class="left-part">
+      <button
+        mat-button
+        class="btn"
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Главная
+      </button>
+    </div>
+
+    <div class="right-part">
+      <section class="profile">
+        <button mat-button class="big-button" [matMenuTriggerFor]="menu">
+          <span class="name">Диана</span>
+          <img src="images/void_avatar.jpg" class="avatar" alt="profile-avatar" />
+          <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item routerLink="profile">
+            <span>Мой профиль</span>
+          </button>
+          <button mat-menu-item routerLink="friendlist">
+            <span>Мои заказы</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <span class="exit">Выход</span>
+          </button>
+        </mat-menu>
+      </section>
+    </div>
+  </div>
+</mat-toolbar>
+
