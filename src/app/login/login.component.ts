@@ -21,10 +21,11 @@ export class LoginComponent implements OnInit {
   public redirectUrl = 'workout';
 
   public isDisplayProgressBar = false;
+
   public loginForm: FormGroup = new FormGroup(
     {
-      username: new FormControl(''),
-      password: new FormControl('')
+      username: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('', Validators.required)
     }
   );
 

@@ -1,0 +1,33 @@
+<div class="background">
+  <section class="block">
+    <form class="form-sign-in" [formGroup]="registrationForm" (ngSubmit)="registration()">
+      <!--      <img
+              class="header-img"
+              src="https://www.flaticon.com/svg/static/icons/svg/2996/2996761.svg"
+              alt="dumbbell"
+            />-->
+      <span class="title-entry">Регистрация</span>
+      <mat-form-field>
+        <mat-label>e-mail</mat-label>
+        <label>
+          <input type="email" matInput formControlName="username" />
+          <input type="password" matInput formControlName="password" (keyup.enter)="registration()" />
+        </label>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="btn-submit"
+        type="submit"
+        color="primary"
+        [disabled]="!registrationForm.valid"
+        (click)="registration()"
+        routerLink="/login"
+      >
+        Зарегистрироваться
+      </button>
+      <div *ngIf="isDisplayProgressBar" class="progress-bar-container">
+        <mat-progress-bar class="progress-bar" mode="indeterminate"></mat-progress-bar>
+      </div>
+    </form>
+  </section>
+</div>
